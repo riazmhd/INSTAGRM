@@ -1,0 +1,14 @@
+app = "instagram-tracker-worker"
+primary_region = "iad"
+
+[build]
+
+[env]
+PYTHONUNBUFFERED = "1"
+
+[[services]]
+internal_port = 8080
+protocol = "tcp"
+
+[processes]
+worker = "python worker.py"
